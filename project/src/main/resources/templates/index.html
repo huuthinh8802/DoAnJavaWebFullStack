@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/extras/spring-security6">
+<!--<![endif]-->
+
+<!-- Mirrored from webcotheme.com/tizzy/tiz002/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2023 03:22:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head th:fragment="head">
+<!-- Basic Page Needs
+  ================================================== -->
+<meta charset="utf-8">
+<title>Trang Chủ</title>
+<!-- SEO Meta
+  ================================================== -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="distribution" content="global">
+<meta name="revisit-after" content="2 Days">
+<meta name="robots" content="ALL">
+<meta name="rating" content="8 YEARS">
+<meta name="Language" content="en-us">
+<meta name="GOOGLEBOT" content="NOARCHIVE">
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- CSS
+  ================================================== -->
+<link rel="stylesheet" type="text/css" th:href="@{/fe/css/font-awesome.min.css}"/>
+<link rel="stylesheet" type="text/css" th:href="@{/fe/css/bootstrap.css}"/>
+<link rel="stylesheet" type="text/css" th:href="@{/fe/css/jquery-ui.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/fe/css/owl.carousel.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/fe/css/fotorama.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/fe/css/magnific-popup.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/fe/css/custom.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/fe/css/responsive.css}">
+<link rel="shortcut icon" th:href="@{/fe/css/images/favicon.html}">
+<link rel="apple-touch-icon" th:href="@{/fe/css/images/apple-touch-icon.html}">
+<link rel="apple-touch-icon" sizes="72x72" th:href="@{/fe/css/images/apple-touch-icon-72x72.html}">
+<link rel="apple-touch-icon" sizes="114x114" th:href="@{/fe/css/images/apple-touch-icon-114x114.html}">
+</head>
+<body class="homepage">
+<div class="se-pre-con"></div>
+<div id="newslater-popup" class="mfp-hide white-popup-block open">
+  <div class="nl-popup-main">
+    <div class="nl-popup-inner">
+      <div class="row">
+        <div class="col-sm-6 col-xs-6 nl-xs-full-width">
+          <div class="newsletter-inner">
+            <h2 class="main_title">20% <span> off </span></h2>
+            <div class="popup-desc">
+              <span>Sign up and get 20% off your</span>
+              <span>Next Order</span>
+            </div>
+            <form>
+              <input type="email" placeholder="Email Here...">
+              <button class="btn-black" title="Subscribe">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xs-6 nl-xs-zero-width"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main"> 
+  <!-- HEADER START -->
+  <header class="navbar navbar-custom " id="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="row">
+          <div class="col-md-3 col-xs-6">
+            <div class="navbar-header"> <a class="navbar-brand page-scroll" th:href="@{/}"> <img alt="Tizzy" th:src="@{/fe/images/logo.png}"> </a> </div>
+          </div>
+          <div class="col-md-3 col-xs-6 right-side">
+            <div class="right-side float-left-xs header-right-link">
+              <ul>
+                <li class="main-search">
+                  <div class="header_search_toggle desktop-view">
+                    <form>
+                      <div class="search-box">
+                        <input class="input-text" type="text" placeholder="Search entire store here...">
+                        <button class="search-btn"></button>
+                      </div>
+                    </form>
+                  </div>
+                </li>
+                <li class="account-icon"> <a href="#">
+					<span id="khungAd"><p id="ten" sec:authentication="name"></p>
+					</span></a>
+                  <div class="header-link-dropdown account-link-dropdown">
+                    <ul class="link-dropdown-list">
+                      <li> <span class="dropdown-title">Default welcome msg!</span>
+                        <ul>
+							<li><a th:href="@{/login}">Sign In</a></li>
+                          <li><a th:href="@{/logout}">Sign Out</a></li>
+                          <li><a th:href="@{/Register}">Create an Account</a></li>
+                        </ul>
+                      </li>
+                      <li> <span class="dropdown-title">Language :</span>
+                        <ul>
+                          <li><a class="active" href="#">English</a></li>
+                          <li><a href="#">French</a></li>
+                          <li><a href="#">German</a></li>
+                        </ul>
+                      </li>
+                      <li> <span class="dropdown-title">Currency :</span>
+                        <ul>
+                          <li><a class="active" href="#">USD</a></li>
+                          <li><a href="#">AUD</a></li>
+                          <li><a href="#">EUR</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="cart-icon"> <a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
+                  <div class="cart-dropdown header-link-dropdown">
+                    <ul class="cart-list link-dropdown-list">
+                      <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+                        <div class="media"> <a class="pull-left"> <img alt="Minimo" th:src="@{/fe/images/1.jpg}"></a>
+                          <div class="media-body"> <span><a>Black African Print Skirt</a></span>
+                            <p class="cart-price">$14.99</p>
+                            <div class="product-qty">
+                              <label>Qty:</label>
+                              <div class="custom-qty">
+                                <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+                        <div class="media"> <a class="pull-left"> <img alt="Minimo" th:src="@{/fe/images/2.jpg}"></a>
+                          <div class="media-body"> <span><a>Black African Print Skirt</a></span>
+                            <p class="cart-price">$14.99</p>
+                            <div class="product-qty">
+                              <label>Qty:</label>
+                              <div class="custom-qty">
+                                <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$29.98</strong></span> </p>
+                    <div class="clearfix"></div>
+                    <div class="mt-20"> <a href="cart.html" class="btn-color btn">Cart</a> <a href="checkout.html" class="btn-color btn right-side">Checkout</a> </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"><i class="fa fa-bars"></i></button>
+          </div>
+          <div class="col-md-6 col-sm-12 position-s left-side float-none-sm">
+            <div class="align-center">
+              <div id="menu" class="navbar-collapse collapse" >
+                <ul class="nav navbar-nav">
+                  <li class="level"> <span class="opener plus"></span> <a th:href="@{Wommen}" class="page-scroll">Women</a>
+                    <div class="megamenu mobile-sub-menu">
+                      <div class="megamenu-inner-top">
+                        <ul class="sub-menu-level1">
+                          <li class="level2"> <a href="shop.html"><span>Women Clothing</span></a>
+                            <ul class="sub-menu-level2">
+                              <li class="level3"><a th:href="@{Wommen}">Dresses</a></li>
+                              <li class="level3"><a th:href="@{Wommen}">Sport Jeans</a></li>
+                              <li class="level3"><a th:href="@{Wommen}">Skirts</a></li>
+                              <li class="level3"><a th:href="@{Wommen}">Tops</a></li>
+                            </ul>
+                          </li>
+                          <li class="level2"> <a href="shop.html"><span>Women Fashion</span></a>
+                            <ul class="sub-menu-level2 ">
+                              <li class="level3"><a href="shop.html">Blazer & Coat</a></li>
+                              <li class="level3"><a href="shop.html">Sport Shoes</a></li>
+                              <li class="level3"><a href="shop.html">Phone Cases</a></li>
+                              <li class="level3"><a href="shop.html">Trousers</a></li>
+                            </ul>
+                          </li>
+                          <li class="level2"> <a href="shop.html"><span>Women Clothings</span></a>
+                            <ul class="sub-menu-level2">
+                              <li class="level3"><a href="shop.html">Dresses</a></li>
+                              <li class="level3"><a href="shop.html">Sport Jeans</a></li>
+                              <li class="level3"><a href="shop.html">Skirts</a></li>
+                              <li class="level3"><a href="shop.html">Tops</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="megamenu-inner-bottom mt-20 visible-lg visible-md">
+                        <img th:src="@{/fe/images/drop_banner1.jpg}" alt="Tizzy">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="level"> <span class="opener plus"></span> <a th:href="@{Men}" class="page-scroll">Men</a>
+                    <div class="megamenu full mobile-sub-menu">
+                      <div class="container">
+                        <div class="megamenu-inner">
+                          <div class="megamenu-inner-top">
+                            <div class="row">
+                              <div class="col-md-3 level2"> <a href="shop.html"><span>Men Fashion</span></a>
+                                <ul class="sub-menu-level2 ">
+                                  <li class="level3"><a th:href="@{Men}">Blazer & Coat</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Sport Shoes</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Phone Cases</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Trousers</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Purse</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Wallets</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3 level2"> <a href="shop.html"><span>Juniors kid</span></a>
+                                <ul class="sub-menu-level2 ">
+                                  <li class="level3"><a href="shop.html">Blazer & Coat</a></li>
+                                  <li class="level3"><a href="shop.html">Sport Shoes</a></li>
+                                  <li class="level3"><a href="shop.html">Phone Cases</a></li>
+                                  <li class="level3"><a href="shop.html">Trousers</a></li>
+                                  <li class="level3"><a href="shop.html">Purse</a></li>
+                                  <li class="level3"><a href="shop.html">Wallets</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3 level2"> <a href="shop.html"><span>Men Clothings</span></a>
+                                <ul class="sub-menu-level2 ">
+                                  <li class="level3"><a href="shop.html">Blazer & Coat</a></li>
+                                  <li class="level3"><a href="shop.html">Chinos & Trousers</a></li>
+                                  <li class="level3"><a href="shop.html">Underwear</a></li>
+                                  <li class="level3"><a href="shop.html">Trousers</a></li>
+                                  <li class="level3"><a href="shop.html">Purse</a></li>
+                                  <li class="level3"><a href="shop.html">Wallets</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3 visible-lg visible-md"> <a href="shop.html"> <img th:src="@{/fe/images/drop_banner.jpg}" alt="Tizzy"> </a> </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="level"><a href="shop.html" class="page-scroll">Juniors</a></li>
+                  <li class="level"> <span class="opener plus"></span> <a href="shop.html" class="page-scroll">Kids</a>
+                    <div class="megamenu mobile-sub-menu">
+                      <div class="megamenu-inner-top">
+                        <ul class="sub-menu-level1">
+                          <li class="level2"> <a href="shop.html"><span>Kids Fashion</span></a>
+                            <ul class="sub-menu-level2 ">
+                              <li class="level3"><a href="shop.html">Blazer & Coat</a></li>
+                              <li class="level3"><a href="shop.html">Sport Shoes</a></li>
+                              <li class="level3"><a href="shop.html">Phone Cases</a></li>
+                              <li class="level3"><a href="shop.html">Trousers</a></li>
+                              <li class="level3"><a href="shop.html">Purse</a></li>
+                              <li class="level3"><a href="shop.html">Wallets</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="level"><a href="shop.html" class="page-scroll">Baby</a></li>
+                  <li class="level"> <span class="opener plus"></span> <a class="page-scroll">Pages</a>
+                    <div class="megamenu mobile-sub-menu">
+                      <div class="megamenu-inner-top">
+                        <ul class="sub-menu-level1">
+                          <li class="level2">
+                            <ul class="sub-menu-level2 ">
+                              <li class="level3"><a href="about.html">About Us</a></li>
+                              <li class="level3"><a href="account.html">Account</a></li>
+                              <li class="level3"><a href="checkout.html">Checkout</a></li>
+                              <li class="level3"><a href="contact.html">Contact</a></li>
+                              <li class="level3"><a href="404.html">404 Error</a></li>
+                              <li class="level3"><a href="blog.html">Blog</a></li>
+                              <li class="level3"><a href="single-blog.html">Single Blog</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header_search_toggle mobile-view">
+          <form>
+            <div class="search-box">
+              <input class="input-text" type="text" placeholder="Search entire store here...">
+              <button class="search-btn"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END --> 
+  
+  <!-- BANNER STRAT -->
+  <div class="banner">
+    <div class="main-banner">
+        <div class="banner-1"> <img th:src="@{/fe/images/banner1.jpg}" alt="Tizzy">
+        </div>
+        <div class="banner-2"> <img th:src="@{/fe/images/banner2.jpg}" alt="Tizzy">
+        </div>
+        <div class="banner-3"> <img th:src="@{/fe/images/banner3.jpg}" alt="Tizzy">
+        </div>
+    </div>
+  </div>
+  <!-- BANNER END --> 
+  
+  <!-- CONTAIN START --> 
+  <!--  Sub-banner Block Start  -->
+  <section class="sub-banner-block"> 
+    <div id="sub-banner-main" class="owl-carousel">
+      
+      <div class="item" th:each="cate : ${listCate}">
+        <div class="sub-banner">
+          <div class="sub-img">
+            <a href="shop.html">
+              <img th:src="@{/fe/images/sub-banner2.jpg}" alt="Tizzy">
+            </a>
+          </div>
+          <div class="sub-desc">
+            <div class="sub-desc-inner">
+              <button class="btn btn-color small">
+                <a href="shop.html">Watch Sale</a>
+              </button>
+              <div class="sub-title" th:text="${cate.categoryName}"></div>
+              <div class="sub-subtitle"> huge range of designer watches</div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  Sub-banner Block End  -->
+  
+  <!--  New Products Block Start  -->
+  <section class="ptb-95 align-center">
+    <div class="container">
+      <div class="product-slider">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="heading-part mb-40">
+              <h2 class="main_title">New Products</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row m-0">
+          <div class="product-main position-r">
+            <div class="four-products" th:each="proAll : ${productAll}">
+              <div class="col-md-3 col-sm-4 col-xs-6 p-0">
+                <div class="product-item mb-16">
+                  <!-- <div class="sale-label"><span>Sale</span></div> -->
+                  <div class="product-image"> <a th:href="@{/detail/{id}(id=${proAll.id})}"> <img th:src="@{'/uploads/'+${proAll.image}}" style="height: 250px;" alt=""> </a>
+                    <div class="product-detail-inner">
+                      <div class="detail-inner-left left-side">
+                        <ul>
+                          <li class="pro-cart-icon">
+                            <form>
+                              <button title="Add to Cart"></button>
+                            </form>
+                          </li>
+                          <li class="pro-wishlist-icon"><a href="#"></a></li>
+                          <li class="pro-compare-icon"><a href="#"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-item-details">
+                    <div class="rating-summary-block">
+                      <div title="53%" class="rating-result"> <span style="width:53%"></span> </div>
+                    </div>
+                    <div class="product-item-name"> <a href="#" th:text="${proAll.productName}"></a> </div>
+                    <div class="price-box"> <span class="price" th:text="${proAll.price}"></span> <del class="price old-price">$100.00</del> </div>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+      <div class="loadmore-products align-center mt-30">
+        <a href="shop.html"> <button class="btn btn-black big">See More Products</button> </a>
+      </div>
+    </div>
+  </section>
+  <!--  New Products Block End  -->
+
+  <!--  Parallax Block Start  -->
+  <section class="ptb-95 parallax-block" data-stellar-background-ratio="0.5">
+    <div class="container service-feature-block">
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">
+          <div class="ser-feature-block">
+            <div class="feature-box feature1">
+              <div class="ser-title">Free Shipping</div>
+              <div class="ser-subtitle">Shipping in World for orders over $99</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="ser-feature-block">
+            <div class="feature-box feature2">
+              <div class="ser-title">Special Gift</div>
+              <div class="ser-subtitle">Give the perfect gift to your loved ones</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="ser-feature-block">
+            <div class="feature-box feature3">
+              <div class="ser-title">Money Back</div>
+              <div class="ser-subtitle">Not receiving an item applied to</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  Parallax Block End  -->
+
+  <section class="ptb-140 shopbybg">
+    <div class="row">
+      <div class="col-lg-5 col-md-5"></div>
+      <div class="col-lg-7 col-md-7">
+        <div class="col-xs-12">
+          <div class="heading-part mb-40">
+            <h2 class="main_title">Watch by Size</h2>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 mb-16">
+          <p>
+            Many desktop publishing packages and web page editors now Internet tend to repeat predefined chunks as necessary.
+          </p>
+        </div>
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+          <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 plr_0">
+            <div class="content-top content-main1">
+              <div class="content-title">Small :</div>
+              <div class="content-shortdesc">Lorem Ipsum generators on the Internet tend to repeat predefined necessary</div>
+              <div class="watchhover">
+                <div class="watchdetail"><a class="watch" href="shop.html">View Product</a> <a class="watch popup-youtube" href="https://www.youtube.com/watch?v=SlvjQjMMwpQ">Watch video</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 plr_0">
+            <div class="content-bottom content-main2">
+              <div class="content-title">Medium :</div>
+              <div class="content-shortdesc">Lorem Ipsum generators on the Internet tend to repeat predefined necessary</div>
+              <div class="watchhover">
+                <div class="watchdetail"><a class="watch" href="shop.html">View Product</a> <a class="watch popup-youtube" href="https://www.youtube.com/watch?v=SlvjQjMMwpQ">Watch video</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 plr_0">
+            <div class="content-top content-main3">
+              <div class="content-title">Large :</div>
+              <div class="content-shortdesc">Lorem Ipsum generators on the Internet tend to repeat predefined necessary</div>
+              <div class="watchhover">
+                <div class="watchdetail"><a class="watch" href="shop.html">View Product</a> <a class="watch popup-youtube" href="https://www.youtube.com/watch?v=SlvjQjMMwpQ">Watch video</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 plr_0">
+            <div class="content-bottom content-main4">
+              <div class="content-title">X-large :</div>
+              <div class="content-shortdesc">Lorem Ipsum generators on the Internet tend to repeat predefined necessary</div>
+              <div class="watchhover">
+                <div class="watchdetail"><a class="watch" href="shop.html">View Product</a> <a class="watch popup-youtube" href="https://www.youtube.com/watch?v=SlvjQjMMwpQ">Watch video</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  Client-Main Block Start  -->
+  <section class="client-main container align-center ptb-95">
+    <div class="client-inner">
+      <div id="client" class="owl-carousel">
+        <div class="item client-detail">
+          <div class="client-img"> <img th:src="@{/fe/images/testimonial_img1.jpg}" alt="Tizzy"> </div>
+          <h4 class="client-title">Wed Censtoriya</h4>
+          <p>make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was make a type specimen book. It has survived not only five centuries.</p>
+          <h4 class="sub-title">Wed.Censtoriya@gmail.com</h4>
+        </div>
+        <div class="item client-detail">
+          <div class="client-img"> <img th:src="@{/fe/images/testimonial_img2.jpg}" alt="Tizzy"> </div>
+          <h4 class="client-title">Wed Censtoriya</h4>
+          <p>make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was make a type specimen book. It has survived not only five centuries.</p>
+          <h4 class="sub-title">Wed.Censtoriya@gmail.com</h4>
+        </div>
+        <div class="item client-detail">
+          <div class="client-img"> <img th:src="@{/fe/images/testimonial_img3.jpg}" alt="Tizzy"> </div>
+          <h4 class="client-title">Wed Censtoriya</h4>
+          <p>make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was make a type specimen book. It has survived not only five centuries.</p>
+          <h4 class="sub-title">Wed.Censtoriya@gmail.com</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  Client-Main Block End  -->
+
+  <!-- Latest News block Start  -->
+  <section class="pb-95 blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="heading-part mb-40">
+            <h2 class="main_title">Latest News</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row home-blog-item m-0">
+        <div class="item">
+          <div class="blog-item">
+            <div class="blog-media">
+              <a href="single-blog.html"><img th:src="@{/fe/images/blog_img1.jpg}" alt="Tizzy"></a>
+            </div>
+            <div class="blog-detail">
+              <div class="blog-detail-inner">
+                <div class="blog-contant">
+                  <a href="single-blog.html">
+                    <h3>Lorem Ipsum Tizzy</h3>
+                  </a>
+                  <div class="blog-desc">
+                    <a href="single-blog.html">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. <span class="hidden-sm hidden-xs"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too ...</span>
+                    </a>
+                  </div>
+                  <div class="post-info">
+                      <ul>
+                        <li class="post-date"><a href="#">11/3/2017</a></li>
+                        <li class="post-comment"><a href="#">(5) comments</a></li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="blog-item">
+            <div class="blog-media">
+              <a href="single-blog.html"><img th:src="@{/fe/images/blog_img2.jpg}" alt="Tizzy"></a>
+            </div>
+            <div class="blog-detail">
+              <div class="blog-detail-inner">
+                <div class="blog-contant">
+                  <a href="single-blog.html">
+                  <h3>Lorem Ipsum Tizzy</h3>
+                </a>
+                <div class="blog-desc">
+                  <a href="single-blog.html">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. <span class="hidden-sm hidden-xs"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too ...</span>
+                  </a>
+                </div>
+                <div class="post-info">
+                  <ul>
+                    <li class="post-date"><a href="#">11/3/2017</a></li>
+                    <li class="post-comment"><a href="#">(5) comments</a></li>
+                  </ul>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="blog-item">
+            <div class="blog-media">
+              <a href="single-blog.html"><img th:src="@{/fe/images/blog_img3.jpg}" alt="Tizzy"></a>
+            </div>
+            <div class="blog-detail">
+              <div class="blog-detail-inner">
+                <div class="blog-contant">
+                  <a href="single-blog.html">
+                  <h3>Lorem Ipsum Tizzy</h3>
+                </a>
+                <div class="blog-desc">
+                  <a href="single-blog.html">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. <span class="hidden-sm hidden-xs"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too ...</span>
+                  </a>
+                </div>
+                <div class="post-info">
+                  <ul>
+                    <li class="post-date"><a href="#">11/3/2017</a></li>
+                    <li class="post-comment"><a href="#">(5) comments</a></li>
+                  </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="blog-item">
+            <div class="blog-media">
+              <a href="single-blog.html"><img th:src="@{/fe/images/blog_img4.jpg}" alt="Tizzy"></a>
+            </div>
+            <div class="blog-detail">
+              <div class="blog-detail-inner">
+                <div class="blog-contant">
+                  <a href="single-blog.html">
+                  <h3>Lorem Ipsum Tizzy</h3>
+                  </a>
+                  <div class="blog-desc">
+                    <a href="single-blog.html">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. <span class="hidden-sm hidden-xs"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too ...</span>
+                    </a>
+                  </div>
+                  <div class="post-info">
+                    <ul>
+                      <li class="post-date"><a href="#">11/3/2017</a></li>
+                      <li class="post-comment"><a href="#">(5) comments</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Latest News block End  -->
+
+  <!-- Brand logo block Start  -->
+  <section class="pb-50 brand-main">
+    <div class="container">
+      <div class="row brand">
+        <div class="col-md-12">
+          <div id="brand-logo" class="owl-carousel align_center">
+            <div class="item"><a href="#"><img th:src="@{/fe/images/brand1.jpg}" alt="#"></a></div>
+            <div class="item"><a href="#"><img th:src="@{/fe/images/brand2.jpg}" alt="#"></a></div>
+            <div class="item"><a href="#"><img th:src="@{/fe/images/brand3.jpg}" alt="#"></a></div>
+            <div class="item"><a href="#"><img th:src="@{/fe/images/brand4.jpg}" alt="#"></a></div>
+            <div class="item"><a href="#"><img th:src="@{/fe/images/brand5.jpg}" alt="#"></a></div>
+            <div class="item"><a href="#"><img th:src="@{/fe/images/brand6.jpg}" alt="#"></a></div>
+            <div class="item"><a href="#"><img th:src="@{/fe/images/brand7.jpg}" alt="#"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Brand logo block End  --> 
+
+  <!-- CONTAINER END --> 
+  
+  <!-- FOOTER START -->
+  <div class="footer dark-bg">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-middle">
+          <div class="row">
+            <div class="col-md-3 col-sm-12 col-xs-12 f-col">
+              <div class="footer-static-block"> <span class="opener plus"></span>
+                <h3 class="title">Services</h3>
+                <ul class="footer-block-contant link">
+                  <li><a><span>■</span> About Us</a></li>
+                  <li><a><span>■</span> Jobs</a></li>
+                  <li><a><span>■</span> Affiliates</a></li>
+                  <li><a><span>■</span> Contact</a></li>
+                  <li><a><span>■</span> Jobs</a></li>
+                  <li><a><span>■</span> Affiliates</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 align-center">
+              <div class="footer-static-block"> <span class="opener plus"></span>
+                <h3 class="title hidden-lg hidden-md">Tizzy</h3>
+                <div class="footer-block-contant">  
+                  <div class="f-logo hidden-xs hidden-sm"> <a href="index-2.html" class=""> <img th:src="@{/fe/images/footer-logo.png}" alt="Tizzy"> </a> </div>
+                  <p>Aenean dapibusMorbi dictum orci non vehicula sollicitudin. Sed auctor dui nibh, id elementum dolor dictum et. Nulla eu purus</p>
+                </div>
+              </div>
+              <div class="footer-static-block"> <span class="opener plus"></span>
+                <h3 class="title hidden-lg hidden-md">Newsletter</h3>
+                <div class="newsletter footer-block-contant">
+                   <form>
+                      <div class="newsletter-inner">
+                        <input type="email" placeholder="Sign up for Newsletter">
+                        <button title="Subscribe">Subscribe</button>
+                      </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 f-col">
+              <div class="footer-static-block f-address"> <span class="opener plus"></span>
+                <h3 class="title">Contact Us</h3>
+                <div class=""> <!-- <span class="opener plus"></span> -->
+                <ul class="footer-block-contant address-footer">
+                  <li class="item">
+                    <p>150-A Appolo aprtment, opp. Hopewell Junction, Allen st Road, new york-405001.</p>
+                  </li>
+                  <li class="item">
+                    <p> <a>infoservices@Tizzy.com </a> </p>
+                  </li>
+                  <li class="item">
+                    <p>(+91) 9834567890</p>
+                  </li>
+                </ul>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="footer-bottom mb-30">
+          <div class="row">
+            <div class="col-md-4 col-sm-12 center-sm">
+              <div class="payment left-side float-none-sm float-none-xs center-xs">
+                <ul class="payment_icon">
+                  <li class="discover"><a></a></li>
+                  <li class="visa"><a></a></li>
+                  <li class="mastro"><a></a></li>
+                  <li class="paypal"><a></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12 center-sm">
+              <div class="copy-right center-xs">© 2017  All Rights Reserved. Design By <a href="#">Webcotheme</a></div>
+            </div>
+            <div class="col-md-4 col-sm-12 center-sm">
+              <div class="footer_social pt-xs-15 right-side float-none-xs float-none-sm center-xs mt-xs-15">
+                <ul class="social-icon">
+                  <li><a title="Facebook" class="facebook"><i class="fa fa-facebook"> </i></a></li>
+                  <li><a title="Twitter" class="twitter"><i class="fa fa-twitter"> </i></a></li>
+                  <li><a title="Linkedin" class="linkedin"><i class="fa fa-linkedin"> </i></a></li>
+                  <li><a title="RSS" class="rss"><i class="fa fa-rss"> </i></a></li>
+                  <li><a title="Pinterest" class="pinterest"><i class="fa fa-pinterest"> </i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="footer-bottom mt-30">
+          <div class="site-link align-center">
+            <ul>
+              <li><a>Cycling</a>/</li>
+              <li><a>Running</a>/</li>
+              <li><a>Swimming</a>/</li>
+              <li><a>Football</a>/</li>
+              <li><a>Golf</a>/</li>
+              <li><a>Tools</a>/</li>
+              <li><a>Bedding</a>/</li>
+              <li><a>Food</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-top">
+    <div id="scrollup"></div>
+  </div>
+  <!-- FOOTER END --> 
+</div>
+	<script th:src="@{/fe/js/jquery-1.12.3.min.js}"></script> 
+	<script th:src="@{/fe/js/bootstrap.min.js}"></script>  
+	<script th:src="@{/fe/js/jquery-ui.min.js}"></script> 
+	<script th:src="@{/fe/js/fotorama.js}"></script>
+	<script th:src="@{/fe/js/jquery.magnific-popup.js}"></script> 
+	<script th:src="@{/fe/js/owl.carousel.min.js}"></script> 
+	<script th:src="@{/fe/js/jquery.stellar.js}"></script>
+	<script th:src="@{/fe/js/custom.js}"></script>
+	
+	<script>
+	  /* ------------ Newslater-popup JS Start ------------- */
+	  $(window).load(function() {
+	    $.magnificPopup.open({
+	      items: {src: '#newslater-popup'},type: 'inline'}, 0);
+	  });
+	    /* ------------ Newslater-popup JS End ------------- */
+	</script>
+
+</body>
+
+<!-- Mirrored from webcotheme.com/tizzy/tiz002/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2023 03:24:00 GMT -->
+</html>

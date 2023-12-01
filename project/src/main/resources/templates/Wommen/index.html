@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<title>Wommem</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<!-- Mirrored from webcotheme.com/tizzy/tiz002/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2023 03:25:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head th:replace="admin/fragments/head :: head"></head>
+<body >
+<div class="se-pre-con"></div>
+<div class="main"> 
+   <!-- HEADER START -->
+  <header class="navbar navbar-custom " id="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="row">
+          <div class="col-md-3 col-xs-6">
+            <div class="navbar-header"> <a class="navbar-brand page-scroll" th:href="@{/}"> <img alt="Tizzy" th:src="@{/assets/images/logo.png}"> </a> </div>
+          </div>
+          <div class="col-md-3 col-xs-6 right-side">
+            <div class="right-side float-left-xs header-right-link">
+              <ul>
+                <li class="main-search">
+                  <div class="header_search_toggle desktop-view">
+                    <form>
+                      <div class="search-box">
+                        <input class="input-text" type="text" placeholder="Search entire store here...">
+                        <button class="search-btn"></button>
+                      </div>
+                    </form>
+                  </div>
+                </li>
+                <li class="account-icon"> <a href="#"><span></span></a>
+                  <div class="header-link-dropdown account-link-dropdown">
+                    <ul class="link-dropdown-list">
+                      <li> <span class="dropdown-title">Default welcome msg!</span>
+                        <ul>
+                          <li><a th:href="@{/logon}">Sign In</a></li>
+                          <li><a href="register.html">Create an Account</a></li>
+                        </ul>
+                      </li>
+                      <li> <span class="dropdown-title">Language :</span>
+                        <ul>
+                          <li><a class="active" href="#">English</a></li>
+                          <li><a href="#">French</a></li>
+                          <li><a href="#">German</a></li>
+                        </ul>
+                      </li>
+                      <li> <span class="dropdown-title">Currency :</span>
+                        <ul>
+                          <li><a class="active" href="#">USD</a></li>
+                          <li><a href="#">AUD</a></li>
+                          <li><a href="#">EUR</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="cart-icon"> <a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
+                  <div class="cart-dropdown header-link-dropdown">
+                    <ul class="cart-list link-dropdown-list">
+                      <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+                        <div class="media"> <a class="pull-left"> <img alt="Minimo" th:src="@{/assets/images/1.jpg}"></a>
+                          <div class="media-body"> <span><a>Black African Print Skirt</a></span>
+                            <p class="cart-price">$14.99</p>
+                            <div class="product-qty">
+                              <label>Qty:</label>
+                              <div class="custom-qty">
+                                <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+                        <div class="media"> <a class="pull-left"> <img alt="Minimo" th:src="@{/assets/images/2.jpg}"></a>
+                          <div class="media-body"> <span><a>Black African Print Skirt</a></span>
+                            <p class="cart-price">$14.99</p>
+                            <div class="product-qty">
+                              <label>Qty:</label>
+                              <div class="custom-qty">
+                                <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$29.98</strong></span> </p>
+                    <div class="clearfix"></div>
+                    <div class="mt-20"> <a href="cart.html" class="btn-color btn">Cart</a> <a href="checkout.html" class="btn-color btn right-side">Checkout</a> </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"><i class="fa fa-bars"></i></button>
+          </div>
+          <div class="col-md-6 col-sm-12 position-s left-side float-none-sm">
+            <div class="align-center">
+              <div id="menu" class="navbar-collapse collapse" >
+                <ul class="nav navbar-nav">
+                  <li class="level"> <span class="opener plus"></span> <a th:href="@{Wommen}" class="page-scroll">Women</a>
+                    <div class="megamenu mobile-sub-menu">
+                      <div class="megamenu-inner-top">
+                        <ul class="sub-menu-level1">
+                          <li class="level2"> <a th:href="@{Wommen}"><span>Women Clothing</span></a>
+                            <ul class="sub-menu-level2">
+                              <li class="level3"><a th:href="@{Wommen}">Dresses</a></li>
+                              <li class="level3"><a th:href="@{Wommen}">Sport Jeans</a></li>
+                              <li class="level3"><a th:href="@{Wommen}">Skirts</a></li>
+                              <li class="level3"><a th:href="@{Wommen}">Tops</a></li>
+                            </ul>
+                          </li>
+                          <li class="level2"> <a th:href="@{Wommen}"><span>Women Fashion</span></a>
+                            <ul class="sub-menu-level2 ">
+                              <li class="level3"><a th:href="@{Wommen}">Blazer & Coat</a></li>
+                              <li class="level3"><a th:href="@{Wommen}">Sport Shoes</a></li>
+                              <li class="level3"><a th:href="@{Wommen}">Phone Cases</a></li>
+                              <li class="level3"><a th:href="@{Wommen}">Trousers</a></li>
+                            </ul>
+                          </li>
+                          <li class="level2"> <a th:href="@{Wommen}"><span>Women Clothings</span></a>
+                            <ul class="sub-menu-level2">
+                              <li class="level3"><a th:href="@{Wommen}">Dresses</a></li>
+                              <li class="level3"><a th:href="@{Wommen}">Sport Jeans</a></li>
+                              <li class="level3"><a th:href="@{Wommen}">Skirts</a></li>
+                              <li class="level3"><a th:href="@{Wommen}">Tops</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="megamenu-inner-bottom mt-20 visible-lg visible-md">
+                        <img th:src="@{/assets/images/drop_banner1.jpg}" alt="Tizzy">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="level"> <span class="opener plus"></span> <a th:href="@{Men}" class="page-scroll">Men</a>
+                    <div class="megamenu full mobile-sub-menu">
+                      <div class="container">
+                        <div class="megamenu-inner">
+                          <div class="megamenu-inner-top">
+                            <div class="row">
+                              <div class="col-md-3 level2"> <a th:href="@{Men}"><span>Men Fashion</span></a>
+                                <ul class="sub-menu-level2 ">
+                                  <li class="level3"><a th:href="@{Men}">Blazer & Coat</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Sport Shoes</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Phone Cases</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Trousers</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Purse</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Wallets</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3 level2"> <a th:href="@{Men}"><span>Juniors kid</span></a>
+                                <ul class="sub-menu-level2 ">
+                                  <li class="level3"><a th:href="@{Men}">Blazer & Coat</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Sport Shoes</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Phone Cases</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Trousers</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Purse</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Wallets</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3 level2"> <a th:href="@{Men}"><span>Men Clothings</span></a>
+                                <ul class="sub-menu-level2 ">
+                                  <li class="level3"><a th:href="@{Men}">Blazer & Coat</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Chinos & Trousers</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Underwear</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Trousers</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Purse</a></li>
+                                  <li class="level3"><a th:href="@{Men}">Wallets</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3 visible-lg visible-md"> <a th:href="@{Men}"> <img th:src="@{/assets/images/drop_banner.jpg}" alt="Tizzy"> </a> </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="level"><a href="shop.html" class="page-scroll">Juniors</a></li>
+                  <li class="level"> <span class="opener plus"></span> <a th:href="@{Men}" class="page-scroll">Kids</a>
+                    <div class="megamenu mobile-sub-menu">
+                      <div class="megamenu-inner-top">
+                        <ul class="sub-menu-level1">
+                          <li class="level2"> <a href="shop.html"><span>Kids Fashion</span></a>
+                            <ul class="sub-menu-level2 ">
+                              <li class="level3"><a href="shop.html">Blazer & Coat</a></li>
+                              <li class="level3"><a href="shop.html">Sport Shoes</a></li>
+                              <li class="level3"><a href="shop.html">Phone Cases</a></li>
+                              <li class="level3"><a href="shop.html">Trousers</a></li>
+                              <li class="level3"><a href="shop.html">Purse</a></li>
+                              <li class="level3"><a href="shop.html">Wallets</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="level"><a href="shop.html" class="page-scroll">Baby</a></li>
+                  <li class="level"> <span class="opener plus"></span> <a class="page-scroll">Pages</a>
+                    <div class="megamenu mobile-sub-menu">
+                      <div class="megamenu-inner-top">
+                        <ul class="sub-menu-level1">
+                          <li class="level2">
+                            <ul class="sub-menu-level2 ">
+                              <li class="level3"><a href="about.html">About Us</a></li>
+                              <li class="level3"><a href="account.html">Account</a></li>
+                              <li class="level3"><a href="checkout.html">Checkout</a></li>
+                              <li class="level3"><a href="contact.html">Contact</a></li>
+                              <li class="level3"><a href="404.html">404 Error</a></li>
+                              <li class="level3"><a href="blog.html">Blog</a></li>
+                              <li class="level3"><a href="single-blog.html">Single Blog</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header_search_toggle mobile-view">
+          <form>
+            <div class="search-box">
+              <input class="input-text" type="text" placeholder="Search entire store here...">
+              <button class="search-btn"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END --> 
+  
+  <!-- BANNER STRAT -->
+  <div class="banner inner-banner">
+    <div class="container">
+      <section class="banner-detail">
+        <h1 class="banner-title">Women</h1>
+        <div class="bread-crumb right-side">
+          <ul>
+            <li><a href="index-2.html">Home</a>/</li>
+            <li><span>Women</span></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- BANNER END --> 
+  
+  <!-- CONTAIN START -->
+  <section class="ptb-95 mobile-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-4 mb-xs-30">
+          <div class="sidebar-block">
+            <div class="sidebar-box listing-box pb-30"> <span class="opener plus"></span>
+              <div class="sidebar-title">
+                <h3>Categories</h3>
+              </div>
+              <div class="sidebar-contant">
+                <ul>
+                  <li><a>Clothing <span>(21)</span></a></li>
+                  <li><a>Shoes <span>(05)</span></a></li>
+                  <li><a>Jewellery <span>(10)</span></a></li>
+                  <li><a>Home & Furniture <span>(12)</span></a></li>
+                  <li><a>Bags <span>(18)</span></a></li>
+                  <li><a>Accessories <span>(70)</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sidebar-box pb-30 no-border"> <span class="opener plus"></span>
+              <div class="sidebar-title">
+                <h3>Shop by</h3>
+              </div>
+              <div class="sidebar-contant">
+                <div class="price-range mb-30">
+                  <div class="inner-title">Price range</div>
+                  <input class="price-txt" type="text" id="amount">
+                  <div id="slider-range"></div>
+                </div>
+                <div class="mb-20">
+                  <div class="inner-title">Category</div>
+                  <ul>
+                    <li><a>Bags 2 <span>(0)</span></a></li>
+                    <li><a>Clothing x2 2 <span>(05)</span></a></li>
+                    <li><a>Lingerie 2 <span>(10)</span></a></li>
+                  </ul>
+                </div>
+                <div class="mb-20">
+                  <div class="inner-title">Color</div>
+                  <ul>
+                    <li><a>Black <span>(0)</span></a></li>
+                    <li><a>Blue <span>(05)</span></a></li>
+                    <li><a>Brown <span>(10)</span></a></li>
+                  </ul>
+                </div>
+                <div class="mb-20">
+                  <div class="inner-title">Manufacture</div>
+                  <ul>
+                    <li><a>Augue congue <span>(0)</span></a></li>
+                    <li><a>Eu magna <span>(05)</span></a></li>
+                    <li><a>Ipsum sit <span>(10)</span></a></li>
+                  </ul>
+                </div>
+                <a class="btn btn-black">Refine</a> </div>
+            </div>
+            <div class="left-banner-box pb-15 visible-sm visible-md visible-lg"> <a> <img th:src="@{/assets/images/left-banner.jpg}" alt="Honour"> </a> </div>
+            <div class="sidebar-box sidebar-item"> <span class="opener plus"></span>
+              <div class="sidebar-title">
+                <h3>Best Seller</h3>
+              </div>
+              <div class="sidebar-contant">
+                <ul>
+                  <li>
+                    <div class="pro-media"> <a><img alt="T-shirt" th:src="@{/assets/images/1.jpg}"></a> </div>
+                    <div class="pro-detail-info"> <a>Black African Print</a>
+                      <div class="rating-summary-block">
+                        <div class="rating-result" title="53%"> <span style="width:53%"></span> </div>
+                      </div>
+                      <div class="price-box"> <span class="price">$80.00</span> </div>
+                      <div class="cart-link">
+                        <form>
+                          <button title="Add to Cart">Add To Cart</button>
+                        </form>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="pro-media"> <a><img alt="T-shirt" th:src="@{/assets/images/1.jpg}"></a> </div>
+                    <div class="pro-detail-info"> <a>Black African Print</a>
+                      <div class="rating-summary-block">
+                        <div class="rating-result" title="53%"> <span style="width:53%"></span> </div>
+                      </div>
+                      <div class="price-box"> <span class="price">$80.00</span> </div>
+                      <div class="cart-link">
+                        <form>
+                          <button title="Add to Cart">Add To Cart</button>
+                        </form>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="pro-media"> <a><img alt="T-shirt" th:src="@{/assets/images/1.jpg}"></a> </div>
+                    <div class="pro-detail-info"> <a>Black African Print</a>
+                      <div class="rating-summary-block">
+                        <div class="rating-result" title="53%"> <span style="width:53%"></span> </div>
+                      </div>
+                      <div class="price-box"> <span class="price">$80.00</span> </div>
+                      <div class="cart-link">
+                        <form>
+                          <button title="Add to Cart">Add To Cart</button>
+                        </form>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-8">
+          <div class="shorting">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="view">
+                  <div class="list-types grid active "> <a href="shop.html">
+                    <div class="grid-icon list-types-icon"></div>
+                    </a> </div>
+                  <div class="list-types list"> <a href="shop-list.html">
+                    <div class="list-icon list-types-icon"></div>
+                    </a> </div>
+                </div>
+                <div class="short-by float-right-sm"> <span>Sort By</span>
+                  <div class="select-item">
+                    <select>
+                      <option value="" selected="selected">Name (A to Z)</option>
+                      <option value="">Name(Z - A)</option>
+                      <option value="">price(low&gt;high)</option>
+                      <option value="">price(high &gt; low)</option>
+                      <option value="">rating(highest)</option>
+                      <option value="">rating(lowest)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="show-item right-side float-left-sm"> <span>Show</span>
+                  <div class="select-item">
+                    <select>
+                      <option value="" selected="selected">24</option>
+                      <option value="">12</option>
+                      <option value="">6</option>
+                    </select>
+                  </div>
+                  <span>Per Page</span>
+                  <div class="compare float-right-sm"> <a href="#" class="btn btn-black">Compare (0)</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+		<form>
+			<div class="box-header">
+				<h3 class="box-title">Responsive Hover Table</h3>
+				<div class="box-tools">
+					<div class="input-group input-group-sm hidden-xs" style="width: 150px;">
+						<input type="text" name="keyword" class="form-control pull-right" placeholder="Search"
+							fdprocessedid="mrifwg" th:value="${keyword}" style="width: 460px;">
+						<div class="input-group-btn">
+							<button type="submit" class="btn btn-default" fdprocessedid="xkoqmg"><i
+									class="fa fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+          <div class="product-listing grid-view">
+            <div class="row m-0">
+              <div class="col-md-4 col-sm-6 col-xs-6 p-0" th:each="proAll : ${productAll}">
+                <div class="product-item">
+                  <div class="product-image"> <a th:href="@{/detail/{id}(id=${proAll.id})}"> <img th:src="@{'/uploads/'+${proAll.image}}" style="height: 250px;" alt=""> </a>
+                    <div class="product-detail-inner">
+                      <div class="detail-inner-left left-side">
+                        <ul>
+                          <li class="pro-cart-icon">
+                            <form>
+                              <button title="Add to Cart"></button>
+                            </form>
+                          </li>
+                          <li class="pro-wishlist-icon"><a href="#"></a></li>
+                          <li class="pro-compare-icon"><a href="#"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-item-details">
+                    <div class="rating-summary-block">
+                      <div title="53%" class="rating-result"> <span style="width:53%"></span> </div>
+                    </div>
+                    <div class="product-item-name"> <a href="#" th:text="${proAll.productName}"></a> </div>
+                    <div class="price-box"> <span class="price" th:text="${proAll.price}"></span> <del class="price old-price">$100.00</del> </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="row">
+			<div class="col-sm-7">
+				<div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+					<ul class="pagination">
+						<li th:if="${currentPage > 1}"><a th:href="@{'?pageNo=' + ${currentPage-1}}">Previous</a></li>
+						<li th:each="i:${#numbers.sequence(1,totalPage)}" th:classappend="${currentPage == i ? 'active' : ''}"><a
+								th:href="@{${keyword != null && keyword != '' ? '?keyword=' + keyword +'&':'?'}+'pageNo=' + ${i}}"
+								aria-controls="example2" data-dt-idx="1" tabindex="0" th:text="${i}"></a></li>
+			
+						<li th:if="${currentPage < totalPage}"><a th:href="@{'?pageNo=' + ${currentPage+1}}">Next</a></li>
+					</ul>
+				</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CONTAINER END --> 
+  
+  <!-- FOOTER START -->
+  <div class="footer dark-bg">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-middle">
+          <div class="row">
+            <div class="col-md-3 col-sm-12 col-xs-12 f-col">
+              <div class="footer-static-block"> <span class="opener plus"></span>
+                <h3 class="title">Services</h3>
+                <ul class="footer-block-contant link">
+                  <li><a><span>■</span> About Us</a></li>
+                  <li><a><span>■</span> Jobs</a></li>
+                  <li><a><span>■</span> Affiliates</a></li>
+                  <li><a><span>■</span> Contact</a></li>
+                  <li><a><span>■</span> Jobs</a></li>
+                  <li><a><span>■</span> Affiliates</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 align-center">
+              <div class="footer-static-block"> <span class="opener plus"></span>
+                <h3 class="title hidden-lg hidden-md">Tizzy</h3>
+                <div class="footer-block-contant">  
+                  <div class="f-logo hidden-xs hidden-sm"> <a href="index-2.html" class=""> <img th:src="@{/assets/images/footer-logo.png}" alt="Tizzy"> </a> </div>
+                  <p>Aenean dapibusMorbi dictum orci non vehicula sollicitudin. Sed auctor dui nibh, id elementum dolor dictum et. Nulla eu purus</p>
+                </div>
+              </div>
+              <div class="footer-static-block"> <span class="opener plus"></span>
+                <h3 class="title hidden-lg hidden-md">Newsletter</h3>
+                <div class="newsletter footer-block-contant">
+                   <form>
+                      <div class="newsletter-inner">
+                        <input type="email" placeholder="Sign up for Newsletter">
+                        <button title="Subscribe">Subscribe</button>
+                      </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 f-col">
+              <div class="footer-static-block f-address"> <span class="opener plus"></span>
+                <h3 class="title">Contact Us</h3>
+                <div class=""> <!-- <span class="opener plus"></span> -->
+                <ul class="footer-block-contant address-footer">
+                  <li class="item">
+                    <p>150-A Appolo aprtment, opp. Hopewell Junction, Allen st Road, new york-405001.</p>
+                  </li>
+                  <li class="item">
+                    <p> <a>infoservices@Tizzy.com </a> </p>
+                  </li>
+                  <li class="item">
+                    <p>(+91) 9834567890</p>
+                  </li>
+                </ul>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="footer-bottom mb-30">
+          <div class="row">
+            <div class="col-md-4 col-sm-12 center-sm">
+              <div class="payment left-side float-none-sm float-none-xs center-xs">
+                <ul class="payment_icon">
+                  <li class="discover"><a></a></li>
+                  <li class="visa"><a></a></li>
+                  <li class="mastro"><a></a></li>
+                  <li class="paypal"><a></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12 center-sm">
+              <div class="copy-right center-xs">© 2017  All Rights Reserved. Design By <a href="#">Webcotheme</a></div>
+            </div>
+            <div class="col-md-4 col-sm-12 center-sm">
+              <div class="footer_social pt-xs-15 right-side float-none-xs float-none-sm center-xs mt-xs-15">
+                <ul class="social-icon">
+                  <li><a title="Facebook" class="facebook"><i class="fa fa-facebook"> </i></a></li>
+                  <li><a title="Twitter" class="twitter"><i class="fa fa-twitter"> </i></a></li>
+                  <li><a title="Linkedin" class="linkedin"><i class="fa fa-linkedin"> </i></a></li>
+                  <li><a title="RSS" class="rss"><i class="fa fa-rss"> </i></a></li>
+                  <li><a title="Pinterest" class="pinterest"><i class="fa fa-pinterest"> </i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="footer-bottom mt-30">
+          <div class="site-link align-center">
+            <ul>
+              <li><a>Cycling</a>/</li>
+              <li><a>Running</a>/</li>
+              <li><a>Swimming</a>/</li>
+              <li><a>Football</a>/</li>
+              <li><a>Golf</a>/</li>
+              <li><a>Tools</a>/</li>
+              <li><a>Bedding</a>/</li>
+              <li><a>Food</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-top">
+    <div id="scrollup"></div>
+  </div>
+  <!-- FOOTER END --> 
+</div>
+<div th:replace="admin/fragments/script :: script"></div>
+</body>
+
+<!-- Mirrored from webcotheme.com/tizzy/tiz002/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2023 03:25:20 GMT -->
+</html>

@@ -1,0 +1,21 @@
+<div th:fragment="script">
+	
+	<script th:src="@{/assets/js/jquery-1.12.3.min.js}"></script> 
+	<script th:src="@{/assets/js/bootstrap.min.js}"></script>  
+	<script th:src="@{/assets/js/jquery-ui.min.js}"></script> 
+	<script th:src="@{/assets/js/fotorama.js}"></script>
+	<script th:src="@{/assets/js/jquery.magnific-popup.js}"></script> 
+	<script th:src="@{/assets/js/owl.carousel.min.js}"></script> 
+	<script th:src="@{/assets/js/jquery.stellar.js}"></script>
+	<script th:src="@{/assets/js/custom.js}"></script>
+	
+	<script>
+	  /* ------------ Newslater-popup JS Start ------------- */
+	  $(window).load(function() {
+	    $.magnificPopup.open({
+	      items: {src: '#newslater-popup'},type: 'inline'}, 0);
+	  });
+	    /* ------------ Newslater-popup JS End ------------- */
+	</script>
+	
+</div>
